@@ -1,11 +1,13 @@
 {
   "scripts": {
     "build": "node_modules/.bin/esbuild --target=es2019 ./src/index.jsx --bundle --platform=node --outfile=index.js",
+    "build-cli": "node_modules/.bin/esbuild --target=es2019 ./src/cli.jsx --bundle --platform=node --outfile=cli.js",
     "prepare": "husky install"
   },
   "dependencies": {
     "@actions/core": "^1.4.0",
     "@actions/exec": "^1.1.0",
+    "commander": "^8.1.0",
     "d3": "^7.0.0",
     "esbuild": "^0.12.15",
     "husky": "^7.0.1",
@@ -14,6 +16,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@types/commander": "^2.12.2",
     "husky": "^7.0.0"
   }
 }
